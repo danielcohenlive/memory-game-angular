@@ -3,7 +3,7 @@ var GameController = function($scope) {
 
     var rows=4;
     var cols=4;
-    //private function 
+    //private functions 
     var getCardsBy = function(property){
         var isShowing = function(card){
             return card[property];

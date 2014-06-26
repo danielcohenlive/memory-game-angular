@@ -3,7 +3,7 @@
 <html ng-app="application">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Test</title>
+        <title>Memory Game</title>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1-beta1/jquery.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
         <script src="scripts/underscore-min.js"></script>
@@ -15,16 +15,12 @@
                 .directive('memoryCard',           memoryCardDirective)
                 //---------------controllers-------------------------------------------
                 .controller('GameController',       GameController);
-
-			/*$(function(){
-				$("#grid_tbl").grid();
-			});*/
-    var application = angular.module('application', ['applicationRegistry']);
+            var application = angular.module('application', ['applicationRegistry']);
 
 		</script>
     </head>
     <body ng-controller="GameController">
-        <h1>Test</h1>
+        <h1>Memory Game</h1>
         <button ng-click="startGame()">{{ (cards || won) ? "restart" : "start" }}</button>
 		<table id="grid_tbl">
             <tr ng-repeat="col in cards">
