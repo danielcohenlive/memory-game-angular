@@ -17,10 +17,10 @@ var Square = function(val){
 	
 }
 var grid = {
-	vals:[
+	vals: _.shuffle([
 		'a','a','b','c','b','c','d','d',
 		'e','e','f','f','g','g','h','h'
-	],
+	]),
 	squares:[],
 	cols:4,
 	isWon:function(){
